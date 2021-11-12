@@ -86,7 +86,10 @@ impl Solution {
             lines.push(Line { p1: last, p2: pv1 });
         }
         for i in 0..lines.len() {
-            for j in i+3..lines.len() {
+            for j in i+3..i+7 {
+                if j >= lines.len() {
+                    break;
+                }
                 let li = &lines[i];
                 let lj = &lines[j];
 
